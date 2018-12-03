@@ -4,6 +4,8 @@
 
 This code is implemented in python3 with [Chainer](https://github.com/chainer/chainer).
 
+※ Under construction (dataset only available for now)
+
 ## Dataset
 
 Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree/master/pyutils/refer2/)
