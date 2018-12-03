@@ -1,7 +1,8 @@
 ## Note
 
 This API is able to load all 4 referring expression datasets, i.e., RefCOCO, RefCOCO+, RefCOCOg and RefGTA.  
-This repositry is from [here](https://github.com/lichengunc/refer2).
+This repository is made by modifying [this one](https://github.com/lichengunc/refer2).
+
 
 ## Setup
 Run "make" before using the code.
