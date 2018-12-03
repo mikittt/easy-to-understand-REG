@@ -13,5 +13,5 @@ Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree
 ### Acknowledgement
 Our codes are based on [this repositry](https://github.com/lichengunc/speaker_listener_reinforcer).
 
-## License
+### License
 MIT License
