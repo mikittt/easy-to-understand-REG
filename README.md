@@ -5,7 +5,7 @@
 
 - Results	from RefCOCOg
 
-<img src="https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig2.png" width="240">
+<img src="https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig2.png" width="300">
 
 This code is implemented in python3 with [Chainer](https://github.com/chainer/chainer).
 
