@@ -1,6 +1,11 @@
 # Code of [Towards Human-Friendly Referring Expression Generation](https://arxiv.org/abs/1811.12104)
+- Results	from Our dataset(RefGTA)
 
-![results](https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig1.png?token=APgkj3-CtGqGhLIpPYJKbGtUJYp1wCi-ks5cDivlwA%3D%3D)
+![results](https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig1.png)
+
+- Results	from RefCOCOg
+
+<img src="https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig2.png" width="240">
 
 This code is implemented in python3 with [Chainer](https://github.com/chainer/chainer).
 
