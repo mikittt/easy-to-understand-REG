@@ -11,18 +11,22 @@ This code is implemented in python3 with [Chainer](https://github.com/chainer/ch
 
 ※ Under construction (dataset only available for now)
 
+Preprocessed
+
 ## Dataset
 
 Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree/master/pyutils/refer2/)
 
 ## Preprocessing
-
+run ``prepro.py`` or download from [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).  
+(include extracted features)
 ```
 python prepro.py --dataset refgta --splitBy utokyo
 ```
 
 ## Extract features
-- extract local features
+
+- extract local features  
 (we resize images to different sizes depending on their aspect ratio, so please set batch size to 1 for extracting local spatial features)
 
 ```bash
@@ -51,6 +55,9 @@ python train_sp.py --dataset refgta --splitBy utokyo
 
 ## Evaluation
 
+pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj)
+
+
 - generation evaluation (batch size 1 only is supported.)
 ```
 python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1
@@ -61,7 +68,8 @@ python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --ba
 python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split test
 ```
 
-- comprehension evaluation (--mode 0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
+- comprehension evaluation  
+(--mode 0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
 ```
 python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0
 ```
