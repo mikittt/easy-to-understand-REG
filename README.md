@@ -51,17 +51,17 @@ python train_sp.py --dataset refgta --splitBy utokyo
 
 ## Evaluation
 
-For generation evaluation (batch size 1 only)
+- generation evaluation (batch size 1 only is supported.)
 ```
 python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1
 ```
 
-For generation evaluation after reranking
+- generation evaluation after reranking
 ```
 python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split test
 ```
 
-For comprehension evaluation (0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
+- comprehension evaluation (--mode 0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
 ```
 python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0
 ```
