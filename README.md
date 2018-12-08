@@ -37,6 +37,34 @@ python scripts/extract_target_sp_feats.py --dataset refgta --splitBy utokyo --ba
 python scripts/extract_image_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 64
 ```
 
+## Training
+
+First, train reinforcer.
+```
+python scripts/train_vlsim.py --dataset refgta --splitBy utokyo
+```
+
+Second, train speaker using reinforcer whose parameters are fixed.
+```
+python train_sp.py --dataset refgta --splitBy utokyo
+```
+
+## Evaluation
+
+For generation evaluation (batch size 1 only)
+```
+python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1
+```
+
+For generation evaluation after reranking
+```
+python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split test
+```
+
+For comprehension evaluation (0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
+```
+python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0
+```
 
 ### Acknowledgement
 Our codes are based on [this repositry](https://github.com/lichengunc/speaker_listener_reinforcer).
