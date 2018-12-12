@@ -1,7 +1,7 @@
 ## Note
 
 This API is able to load all 4 referring expression datasets, i.e., RefCOCO, RefCOCO+, RefCOCOg and RefGTA.  
-This repository is made by modifying [this one](https://github.com/lichengunc/refer2).
+This repository is made by modifying [this one](https://github.com/lichengunc/refer2).  
 
 
 ## Setup
@@ -10,7 +10,9 @@ It will generate ``_mask.c`` and ``_mask.so`` in ``external/`` folder.
 These mask-related codes are copied from mscoco [API](https://github.com/pdollar/coco).
 
 ## Download
-Download data from [here](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ).
+Download data from [here](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ).  
+Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.  
+Please see detail [here](https://github.com/lichengunc/refer2).
 
 ## Prepare Images:
 For RefCOCO, RefCOCO+ and RefCOCOg, you can download images from [mscoco](http://mscoco.org/dataset/#overview).
@@ -19,7 +21,7 @@ For RefGTA, you can download images [here](https://drive.google.com/open?id=1pcd
 **※ GTA V images are allowed for use in non-commercial and research uses**
 
 ## How to use
-The "refer.py" is able to load all 4 datasets with different kinds of data split by UNC, Google and UC Berkeley.
+The "refer.py" is able to load all 4 datasets with different kinds of data split.
 ```bash
 # locate your own data_root, image_root, and choose the dataset_splitBy you want to use
 refer = REFER(data_root, image_root, dataset='refcoco',  splitBy='unc')

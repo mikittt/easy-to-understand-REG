@@ -9,13 +9,11 @@
 
 This code is implemented in python3 with [Chainer](https://github.com/chainer/chainer).
 
-※ Under construction (dataset only available for now)
-
-Preprocessed
-
 ## Dataset
 
-Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree/master/pyutils/refer2/)
+Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree/master/pyutils/refer2/).  
+This contains RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
+
 
 ## Preprocessing
 run ``prepro.py`` or download from [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).  
@@ -43,12 +41,14 @@ python scripts/extract_image_sp_feats.py --dataset refgta --splitBy utokyo --bat
 
 ## Training
 
-First, train reinforcer.
+First, train reinforcer.  
+If you train with ranking, please add ``-r``.
 ```
 python scripts/train_vlsim.py --dataset refgta --splitBy utokyo
 ```
 
-Second, train speaker using reinforcer whose parameters are fixed.
+Second, train speaker using reinforcer whose parameters are fixed.  
+If you train with ranking, please add ``-r``.
 ```
 python train_sp.py --dataset refgta --splitBy utokyo
 ```
