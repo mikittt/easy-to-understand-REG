@@ -1,5 +1,44 @@
 import argparse
 
+# data_root
+#    - ref (contain older refcoco, refcoco+)
+#        - refcoco
+#        - refcoco+
+#        - refcocog
+#        - refgta
+#    - ref2 (contain new refcoco, refcoco+)
+#        - refcoco
+#        - refcoco+
+#        - refcocog
+#        - refgta
+
+# save_dir
+#    - prepro
+#        - refcoco_unc
+#        - refcoco+_unc
+#        - refcocog_google
+#        - refgta_utokyo
+#    - model
+#        - refcoco_unc
+#        - refcoco+_unc
+#        - refcocog_google
+#        - refgta_utokyo
+
+# coco_image_root
+#    - COCO_train2014_000000000009.jpg
+#    - COCO_train2014_0000000000025.jpg
+#    - ...
+
+# gta_image_root
+#    - dont_specify
+#        - final
+#           - GTA_CvMod_2018-04-25_18-07-48_final_0000011640.png
+#           - ...
+#    - black_wearing
+#    - white_wearing
+
+
+
 def parse_opt():
 	parser = argparse.ArgumentParser()
 	

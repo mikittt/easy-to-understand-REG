@@ -11,8 +11,7 @@ These mask-related codes are copied from mscoco [API](https://github.com/pdollar
 
 ## Download
 Download data from [here](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ).  
-Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.  
-Please see detail [here](https://github.com/lichengunc/refer2).
+Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.(Please see detail in [the original repositry](https://github.com/lichengunc/refer2))
 
 ## Prepare Images:
 For RefCOCO, RefCOCO+ and RefCOCOg, you can download images from [mscoco](http://mscoco.org/dataset/#overview).

@@ -15,9 +15,9 @@ import chainer.links as L
 
 def extract_feature(params):
     if params['dataset'] in ['refcoco', 'refcoco+', 'refcocog']:
-        image_root =  '/data/unagi0/mtanaka/MSCOCO/images/train2014'
+        image_root =  params['coco_image_root']
     elif params['dataset'] == 'refgta':
-        image_root = '/data/unagi0/mtanaka/gta5/gtav_cv_mod_data/'
+        image_root = params['gta_image_root']
     target_save_dir = osp.join(params['save_dir'],'prepro', params['dataset']+'_'+params['splitBy'])
     
     if params['old']:

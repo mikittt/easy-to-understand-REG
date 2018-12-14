@@ -1,9 +1,9 @@
 # Code of [Towards Human-Friendly Referring Expression Generation](https://arxiv.org/abs/1811.12104)
-- Results	from Our dataset(RefGTA)
+- Results from Our dataset(RefGTA)
 
 ![results](https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig1.png)
 
-- Results	from RefCOCOg
+- Results from RefCOCOg
 
 <img src="https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig2.png" width="50%">
 
@@ -42,15 +42,15 @@ python scripts/extract_image_sp_feats.py --dataset refgta --splitBy utokyo --bat
 ## Training
 
 First, train reinforcer.  
-If you train with ranking, please add ``-r``.
+If you train with ranking on RefGTA, please add ``-r``.
 ```
-python scripts/train_vlsim.py --dataset refgta --splitBy utokyo
+python scripts/train_vlsim.py --dataset refgta --splitBy utokyo --id sp
 ```
 
 Second, train speaker using reinforcer whose parameters are fixed.  
-If you train with ranking, please add ``-r``.
+If you train with ranking on RefGTA, please add ``-r``.
 ```
-python train_sp.py --dataset refgta --splitBy utokyo
+python train_sp.py --dataset refgta --splitBy utokyo --id sp
 ```
 
 ## Evaluation
@@ -60,18 +60,18 @@ pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFub
 
 - generation evaluation (batch size 1 only is supported.)
 ```
-python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1
+python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1 --id sp
 ```
 
 - generation evaluation after reranking
 ```
-python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split test
+python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split test --id sp
 ```
 
 - comprehension evaluation  
 (--mode 0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
 ```
-python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0
+python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0 --id sp
 ```
 
 ### Acknowledgement
