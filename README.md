@@ -7,7 +7,18 @@
 
 <img src="https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig2.png" width="50%">
 
-This code is implemented in python3 with [Chainer](https://github.com/chainer/chainer).
+
+## Requirements
+
+- Python 3.6 
+- [Chainer](https://github.com/chainer/chainer) 5.0.0
+- Cuda 9.0, CuDNN v7
+- Numpy, PIL, Matplotlib, H5py, Tqdm  
+
+If you use rerank, please install cplex by ``conda install -c ibmdecisionoptimization cplex``
+
+Training with refcocog and refgta requires 16 GB and 32 GB gpu respectively for the default setting.
+If the memory is insufficient, please reduce the batch size.
 
 ## Dataset
 
@@ -16,13 +27,16 @@ This contains RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
 
 
 ## Preprocessing
-run ``prepro.py`` or download from [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).  
+preprocessed data and extracted features are [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k)
+
+### Preprocess annotation
+run ``prepro.py`` or download from .  
 (include extracted features)
 ```
 python prepro.py --dataset refgta --splitBy utokyo
 ```
 
-## Extract features
+### Extract features
 
 - extract local features  
 (we resize images to different sizes depending on their aspect ratio, so please set batch size to 1 for extracting local spatial features)

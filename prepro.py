@@ -21,7 +21,6 @@ import string
 # non-standard dependencies:
 import h5py
 import numpy as np
-from scipy.misc import imread, imresize
 import matplotlib.pyplot as plt
 # add root path
 import os.path as osp
