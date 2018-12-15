@@ -10,12 +10,10 @@ It will generate ``_mask.c`` and ``_mask.so`` in ``external/`` folder.
 These mask-related codes are copied from mscoco [API](https://github.com/pdollar/coco).
 
 ## Download
-- Annotations is [here](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ).  
+- [Annotations](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ).  
 Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.(Please see detail in [the original repositry](https://github.com/lichengunc/refer2))
-
-- Images
-    - For RefCOCO, RefCOCO+ and RefCOCOg, you can download images from [mscoco](http://mscoco.org/dataset/#overview).
-    - For RefGTA, you can download images [here](https://drive.google.com/open?id=1pcdwA--xSAkbsOwjqhhyXMRZH7_sjQXU).  
+- [MSCOCO](http://mscoco.org/dataset/#overview) images for RefCOCO, RefCOCO+ and RefCOCOg
+- [GTA images](https://drive.google.com/open?id=1pcdwA--xSAkbsOwjqhhyXMRZH7_sjQXU) for RefGTA  
 **※ GTA V images are allowed for use in non-commercial and research uses**
 
 ## How to use
