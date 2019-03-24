@@ -42,13 +42,13 @@ import argparse
 def parse_opt():
 	parser = argparse.ArgumentParser()
 	
-	parser.add_argument('--data_root', type=str, default='',
+	parser.add_argument('--data_root', type=str, default='./dataset/anns/original',
 						help='data folder containing four datasets.')
-	parser.add_argument('--coco_image_root', type=str, default='',
+	parser.add_argument('--coco_image_root', type=str, default='./dataset/coco_image/train2014',
 						help='data folder containing MSCOCO images')
-	parser.add_argument('--gta_image_root', type=str, default='',
+	parser.add_argument('--gta_image_root', type=str, default='./dataset/gta_image/gtav_cv_mod_data',
 						help='data folder containing gta images')
-	parser.add_argument('--save_dir', default='',
+	parser.add_argument('--save_dir', default='./save_dir',
 						help='save directory')
     
 	parser.add_argument('--data_json', default='data.json', help='converted json file')
