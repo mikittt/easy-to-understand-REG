@@ -42,7 +42,7 @@ python prepro.py --dataset refgta --splitBy utokyo
 (we resize images to different sizes depending on their aspect ratio, so please set batch size to 1 for extracting local spatial features)
 
 ```bash
-python scripts/extract_target_emb_feats.py --dataset refgta --splitBy utokyo --batch_sizze 64
+python scripts/extract_target_emb_feats.py --dataset refgta --splitBy utokyo --batch_size 64
 
 # local spatial features
 python scripts/extract_target_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 1
