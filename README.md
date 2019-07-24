@@ -20,10 +20,12 @@ If you use rerank, please install cplex by ``conda install -c ibmdecisionoptimiz
 Training with refcocog and refgta requires 16 GB and 32 GB gpu respectively for the default setting.
 If the memory is insufficient, please reduce the batch size.
 
+Baseline code is [here](https://github.com/mikittt/re-SLR).
+
 ## Dataset
 
 Please go to [this directory](https://github.com/mikittt/Human_Friendly_REG/tree/master/pyutils/refer2/).  
-This contains RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
+Download RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
 
 
 ## Preprocessing
@@ -69,8 +71,8 @@ python train_sp.py --dataset refgta --splitBy utokyo --id sp
 
 ## Evaluation
 
-pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj)
-
+Pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj)
+Generated sentences are [here](https://drive.google.com/open?id=13YZcylNpa8-tBena0swy2VocBBOnIS0-)
 
 - generation evaluation (batch size 1 only is supported.)
 ```
