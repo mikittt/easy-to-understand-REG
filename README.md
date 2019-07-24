@@ -71,7 +71,7 @@ python train_sp.py --dataset refgta --splitBy utokyo --id sp
 
 ## Evaluation
 
-Pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj)
+Pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj).  
 Generated sentences are [here](https://drive.google.com/open?id=13YZcylNpa8-tBena0swy2VocBBOnIS0-)
 
 - generation evaluation (batch size 1 only is supported.)

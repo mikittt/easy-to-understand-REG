@@ -10,16 +10,16 @@ It will generate ``_mask.c`` and ``_mask.so`` in ``external/`` folder.
 These mask-related codes are copied from mscoco [API](https://github.com/pdollar/coco).
 
 ## Download
-- Annotations (Refcoco/+/g)
-Run ```download.sh``` and download annotations in ```../../dataset```. (Please see detail in the original repositries, [refer](https://github.com/lichengunc/refer) and [refer2](https://github.com/lichengunc/refer2))
+- Annotations (Refcoco/+/g)  
+Run ```download.sh``` and download annotations in ```../../dataset```. (Please see detail in the original repositries, [refer](https://github.com/lichengunc/refer) and [refer2](https://github.com/lichengunc/refer2))  
 Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.
 
-- Annotations (RefGTA) 
+- Annotations (RefGTA)  
 Please put [refgta data](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ) in the  ```../../dataset/anns/original/refgta```
-- [MSCOCO](http://mscoco.org/dataset/#overview) images for RefCOCO, RefCOCO+ and RefCOCOg
+- [MSCOCO](http://mscoco.org/dataset/#overview) images for RefCOCO, RefCOCO+ and RefCOCOg  
 Download in ```../../dataset/coco_image```.
-- [GTA images](https://drive.google.com/open?id=1pcdwA--xSAkbsOwjqhhyXMRZH7_sjQXU) for RefGTA 
-**※ GTA V images are allowed for use in non-commercial and research uses**
+- [GTA images](https://drive.google.com/open?id=1pcdwA--xSAkbsOwjqhhyXMRZH7_sjQXU) for RefGTA  
+**※ GTA V images are allowed for use in non-commercial and research uses**  
 Download in ```../../dataset/gta_image```
 
 
