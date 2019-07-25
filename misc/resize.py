@@ -4,11 +4,11 @@ import numpy as np
 def keep_asR_resize(image):
     
     W, H = image.size
-    aspect_list = np.array([12/3, 9/4, 6/6])
-    size_list = np.array([[12, 3], [9, 4], [6, 6]]) * 32
-    #Using below ones might be better.
-    #aspect_list = np.array([36/1, 18/2, 12/3, 9/4, 6/6])
-    #size_list = np.array([[36, 1], [18, 2], [12, 3], [9, 4], [6, 6]]) * 32
+    #aspect_list = np.array([12/3, 9/4, 6/6])
+    #size_list = np.array([[12, 3], [9, 4], [6, 6]]) * 32
+    #Using below ones were better.
+    aspect_list = np.array([36/1, 18/2, 12/3, 9/4, 6/6])
+    size_list = np.array([[36, 1], [18, 2], [12, 3], [9, 4], [6, 6]]) * 32
     if W > H:
         region_aspect = W/(H+1e-15)
         new_w, new_h = size_list[np.argmin(np.absolute(aspect_list - region_aspect))]
