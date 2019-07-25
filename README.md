@@ -15,7 +15,7 @@
 - Cuda 9.0, CuDNN v7
 - Numpy, PIL, Matplotlib, H5py, Tqdm  
 
-If you use rerank, please install cplex by ``conda install -c ibmdecisionoptimization cplex``
+If you use rerank, please install cplex by ``conda install -c ibmdecisionoptimization cplex``.
 
 Training with refcocog and refgta requires 16 GB and 32 GB gpu respectively for the default setting.
 If the memory is insufficient, please reduce the batch size.
@@ -29,19 +29,18 @@ Download RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
 
 
 ## Preprocessing
-preprocessed data and extracted features are [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k)
+Preprocessed data and extracted features are [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).
 
 ### Preprocess annotation
-run ``prepro.py`` or download from .  
-(include extracted features)
+Run ``prepro.py``.  
 ```
 python prepro.py --dataset refgta --splitBy utokyo
 ```
 
 ### Extract features
 
-- extract local features  
-(we resize images to different sizes depending on their aspect ratio, so please set batch size to 1 for extracting local spatial features)
+- Extract local features  
+(We resize images to different sizes depending on their aspect ratio, so please set the batch size to 1 for extracting local spatial features.)
 
 ```bash
 python scripts/extract_target_emb_feats.py --dataset refgta --splitBy utokyo --batch_size 64
@@ -50,7 +49,7 @@ python scripts/extract_target_emb_feats.py --dataset refgta --splitBy utokyo --b
 python scripts/extract_target_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 1
 ```
 
-- extract global features
+- Extract global features
 ```bash
 python scripts/extract_image_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 64
 ```
@@ -72,7 +71,7 @@ python train_sp.py --dataset refgta --splitBy utokyo --id sp
 ## Evaluation
 
 Pretrained model is [here](https://drive.google.com/open?id=1sEhePkoIqlzDcAPNFubfH9OODS6yZYkj).  
-Generated sentences are [here](https://drive.google.com/open?id=13YZcylNpa8-tBena0swy2VocBBOnIS0-)
+Generated sentences are [here](https://drive.google.com/open?id=13YZcylNpa8-tBena0swy2VocBBOnIS0-).
 
 - generation evaluation (batch size 1 only is supported.)
 ```
