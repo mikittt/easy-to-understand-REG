@@ -10,9 +10,9 @@ It will generate ``_mask.c`` and ``_mask.so`` in ``external/`` folder.
 These mask-related codes are copied from mscoco [API](https://github.com/pdollar/coco).
 
 ## Download
-- Annotations (Refcoco/+/g)  
+- Annotations (RefCOCO/+/g)  
 Run ```download.sh``` and download annotations in ```../../dataset```. (Please see detail in the original repositries, [refer](https://github.com/lichengunc/refer) and [refer2](https://github.com/lichengunc/refer2))  
-Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.
+Note that RefCOCO(+) has 2 versions because the newer version have more captions on the test set to evaluate generated captions more robustly.
 
 - Annotations (RefGTA)  
 Please put [refgta data](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ) in  ```../../dataset/ann/original/ref2/refgta```.
