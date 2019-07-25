@@ -15,7 +15,7 @@ Run ```download.sh``` and download annotations in ```../../dataset```. (Please s
 Note that there are refcoco(+) and refcoco(+)_old folders because more captions were collected for test set to evaluate generation quality more robustly.
 
 - Annotations (RefGTA)  
-Please put [refgta data](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ) in the  ```../../dataset/anns/original/refgta```
+Please put [refgta data](https://drive.google.com/open?id=19UQsGDb8s9oi-v7bAw41ZqzypwM5ECaQ) in the  ```../../dataset/ann/original/ref2/refgta```
 - [MSCOCO](http://mscoco.org/dataset/#overview) images for RefCOCO, RefCOCO+ and RefCOCOg  
 Download in ```../../dataset/coco_image```.
 - [GTA images](https://drive.google.com/open?id=1pcdwA--xSAkbsOwjqhhyXMRZH7_sjQXU) for RefGTA  
