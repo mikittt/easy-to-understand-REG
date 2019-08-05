@@ -115,7 +115,6 @@ def train_all(params):
                                        data['neg_local_shapes'], 
                                        data['local_shapes']], axis=0)
         
-        print(time.time()-start);start = time.time()
         feats = F.concat([pos_feats, neg_feats, pos_feats], axis=0)
         sp_cxt_feats = F.concat([pos_sp_cxt_feats, neg_pos_sp_cxt_feats, pos_sp_cxt_feats], axis=0)
         sp_ann_feats = F.concat([pos_sp_ann_feats, neg_pos_sp_ann_feats, pos_sp_ann_feats], axis=0)
@@ -123,25 +122,21 @@ def train_all(params):
         lang_last_ind = calc_max_ind(seqz)
         seqz = Variable(xp.array(seqz, dtype=xp.int32))
     
-        print(time.time()-start);start = time.time()
         coord = cuda.to_cpu(feats[:, sum(ve.feat_ind[:1]):sum(ve.feat_ind[:2])].data)
         local_sp_coord, global_sp_coord = calc_coordinate_feature(coord, local_shapes, 
                                                                   global_shapes=global_shapes)
         local_sp_coord, global_sp_coord = xp.array(local_sp_coord, dtype=xp.float32), xp.array(global_sp_coord, dtype=xp.float32)
         
         # encode vis feature
-        print(time.time()-start);start = time.time()
         vis_feats = ve(feats, sp_cxt_feats, coord)
         sp_feats, sp_feats_emb = lm.calc_spatial_features(sp_cxt_feats, sp_ann_feats,
                                                           local_sp_coord, global_sp_coord)
         
-        print(time.time()-start);start = time.time()
         logprobs = lm(vis_feats, sp_feats, sp_feats_emb, 
                       coord, seqz, lang_last_ind)
         
         
         # lang loss
-        print(time.time()-start);start = time.time()
         pairP, vis_unpairP, lang_unpairP  = F.split_axis(logprobs, 3, axis = 1)
         pair_num, _, lang_unpair_num = np.split(lang_last_ind, 3)
         num_labels = {'T':xp.array(pair_num),'F':xp.array(lang_unpair_num)}
@@ -149,7 +144,6 @@ def train_all(params):
         lm_loss    = lm_crits(lm_flows, num_labels, params['lm_margin'], 
                              vlamda=params['vis_rank_weight'], llamda=params['lang_rank_weight'])
         
-        print(time.time()-start);start = time.time()
         # RL loss (pos,pos)
         rl_vis_feats = F.split_axis(vis_feats, 3, axis=0)[0]
         rl_coord     = np.split(coord, 3, axis=0)[0]
@@ -292,7 +286,6 @@ def train_all(params):
             
             
             if params['dataset'] == 'refgta':
-                print(rank_num)
                 val_rank_acc_history.append(rank_acc/rank_num)
                 plt.title("rank loss")
                 plt.plot(np.arange(len(val_rank_acc_history)), val_rank_acc_history, label="rank_acc")

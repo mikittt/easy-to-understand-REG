@@ -29,7 +29,8 @@ Download RefCOCO, RefCOCO+, RefCOCOg and RefGTA(our dataset).
 
 
 ## Preprocessing
-Preprocessed data and extracted features are [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).
+Run below codes or download preprocessed data and extracted features from [here](https://drive.google.com/open?id=1j6kmPq3_RROGO8plICmN6kjM1DCrq_-k).  
+
 
 ### Preprocess annotation
 Run ``prepro.py``.  
@@ -46,12 +47,12 @@ python prepro.py --dataset refgta --splitBy utokyo
 python scripts/extract_target_emb_feats.py --dataset refgta --splitBy utokyo --batch_size 64
 
 # local spatial features
-python scripts/extract_target_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 1
+python scripts/extract_target_feats.py --dataset refgta --splitBy utokyo --batch_size 1
 ```
 
 - Extract global features
 ```bash
-python scripts/extract_image_sp_feats.py --dataset refgta --splitBy utokyo --batch_size 64
+python scripts/extract_image_feats.py --dataset refgta --splitBy utokyo --batch_size 64
 ```
 
 ## Training
@@ -65,7 +66,7 @@ python scripts/train_vlsim.py --dataset refgta --splitBy utokyo --id sp
 Second, train speaker using reinforcer whose parameters are fixed.  
 If you train with ranking on RefGTA, please add ``-r``.
 ```
-python train_sp.py --dataset refgta --splitBy utokyo --id sp
+python train.py --dataset refgta --splitBy utokyo --id sp
 ```
 
 ## Evaluation
@@ -75,7 +76,7 @@ Generated sentences are [here](https://drive.google.com/open?id=13YZcylNpa8-tBen
 
 - generation evaluation (batch size 1 only is supported.)
 ```
-python eval_generation_sp.py --dataset refgta --splitBy utokyo --split test --batch_size 1 --id sp
+python eval_generation.py --dataset refgta --splitBy utokyo --split test --batch_size 1 --id sp
 ```
 
 - generation evaluation after reranking
@@ -86,7 +87,7 @@ python rerank_generated_captions.py --dataset refgta --splitBy utokyo --split te
 - comprehension evaluation  
 (--mode 0:speaker comprehension, 1:reinforcer comprehension, 2:ensemble)
 ```
-python eval_comprehension_sp.py --dataset refgra --splitBy utokyo --split test --mode 0 --id sp
+python eval_comprehension.py --dataset refgra --splitBy utokyo --split test --mode 0 --id sp
 ```
 
 ### Acknowledgement
