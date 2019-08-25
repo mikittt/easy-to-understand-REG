@@ -99,14 +99,12 @@ def eval_all(params):
     print(lang_stats)
     
     print('sentence mean length: ', np.mean([len(pred['sent'].split()) for pred in predictions]))
-    with open(result_dir+'/'+params['id']+params['id2']+str(params['beam_width'])+'raw.json','w') as f:
+    with open(result_dir+'/'+params['id']+params['id2']+str(params['beam_width'])+params['split']+'raw.json','w') as f:
         json.dump(predictions, f)
-    with open(result_dir+'/'+params['id']+params['id2']+str(params['beam_width'])+'.json','w') as f:
+    with open(result_dir+'/'+params['id']+params['id2']+str(params['beam_width'])+params['split']+'.json','w') as f:
         json.dump(lang_stats, f)
-    
-    if params['beam_width']>1:
-        with open(target_save_dir+params["split"]+'_'+params['id']+params['id2']+str(params['beam_width'])+'.json','w') as f:
-            json.dump(beam_all_results, f)
+    with open(result_dir+'/'+params['id']+params['id2']+str(params['beam_width'])+params['split']+'all_beam.json','w') as f:
+        json.dump(beam_all_results, f)
         
                     
 if __name__ == '__main__':
