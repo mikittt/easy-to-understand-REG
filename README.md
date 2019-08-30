@@ -1,4 +1,4 @@
-# Code of [Towards Human-Friendly Referring Expression Generation](https://arxiv.org/abs/1811.12104)
+# Code of [Generating Easy-to-Understand Referring Expressions for Target Identifications](https://arxiv.org/abs/1811.12104)
 - Results from Our dataset(RefGTA)
 
 ![results](https://raw.githubusercontent.com/mikittt/Human_Friendly_REG/master/demo/fig1.png)
